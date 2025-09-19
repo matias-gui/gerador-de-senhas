@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha</title>
+     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/stylemediaquery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+   
+</head>
+
+<body>
+     <span id="mensagem"></span>
+    <main class="container">
+        <h1>
+            Gerador de Senhas
+        </h1>
+        <section class="container-inicio">
+            <form class="formulario">
+                <input type="number" name="tamanhoSenha" id="iTamanhoSenha" placeholder="Tamanho da senha" min="0" required>
+            </form>
+            <button  class="gerarSenha">
+                Gerar senha
+            </button>
+        </section>
+        <section class="container-resultado">
+            <h2>
+                Senha Gerada
+            </h2>
+            <p class="senha">
+            </p>
+            <button  class="copiarSenha">
+                Copiar Senha
+            </button>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
+<script src="js/script.js"></script>

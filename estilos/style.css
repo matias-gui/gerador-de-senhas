@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+@keyframes mensagem {
+    0%{
+        transform: rotate(0deg);
+    }
+    30%{
+        transform: rotate(2deg);
+    }
+    50%{
+        transform: rotate(-2deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.463);
+    background: url(/img/iimg-fundo.jpg) no-repeat center center ;
+    background-size: cover;
+}
+
+#mensagem{
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 230px ;
+    height: 40px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bolder;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.464);
+
+    
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff38;
+    border: 1px solid #ffffff26;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.26);
+    border-radius: 20px;
+    width: 200px;
+    height: 400px;
+}
+h1, h2{
+    text-align: center;
+    margin: 5px;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    cursor:default;
+}
+h1{
+    font-size: 20px;
+}
+h2{
+    font-size: 17px;
+}
+
+.container-inicio{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100px;
+   width: 180px;
+   gap: 10px;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulario input{
+    width: 90%;
+    font-size: 15px;
+    text-align: center;
+    outline: none;
+    padding: 2px;
+    border-radius: 5px;
+}
+.gerarSenha,.copiarSenha{
+    font-family: "Quantico", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    width: 50%;
+    font-size: 15px;
+    padding: 2px;
+    border-radius: 5px;
+    border: none;  
+    cursor: pointer;
+}
+.container-resultado{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0;
+    align-items: center;
+    width: 250px;
+    height: 200px;
+}
+.senha{
+    background-color: aliceblue;
+    overflow: hidden;
+    font-family: "Electrolize", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 60%;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+
+
