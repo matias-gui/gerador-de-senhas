@@ -1,4 +1,8 @@
-
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 @keyframes mensagem {
     0%{
         transform: rotate(0deg);
@@ -21,7 +25,7 @@ body{
     overflow: auto;
     width: 100vw;
     height: 100vh;
-    background-image: url(/img/iimg-fundo.jpg);
+    background-image: url(../img/iimg-fundo.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
