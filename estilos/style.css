@@ -1,8 +1,4 @@
 
-*{
-    padding: 0px;
-    margin: 0px;
-}
 @keyframes mensagem {
     0%{
         transform: rotate(0deg);
