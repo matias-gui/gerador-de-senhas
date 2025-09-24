@@ -7,7 +7,7 @@ let copiarSenha = document.querySelector('.copiarSenha')
 
 
 let senhas = '"@#$¨¨&*()_-=+/?°`[]{}|<>;:1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!"@#$¨¨&*()_-=+/?°`[]{}|<>;:'
-
+ containerResultado.style.display = 'none'
 gerarSenha.addEventListener('click', () => {
     let senhaAtual = ''
     if (tamanhoSenha.value <= 3) {
@@ -17,7 +17,11 @@ gerarSenha.addEventListener('click', () => {
         mensagem.style.backgroundColor = ' rgba(116, 23, 23, 0.97)'
         mensagem.textContent = 'Tamanho da senha invalido !!'
         mensagem.style.animation = 'mensagem .5s ease-in-out  2 '
-        containerResultado.style.opacity = 0
+        containerResultado.style.display= 'none'
+
+        setTimeout( () => {
+            mensagem.style.display = 'none'
+        }, 3000)
     } else {
         mensagem.style.display = 'none'
         for (let i = 0; i < tamanhoSenha.value; i++) {
@@ -25,8 +29,7 @@ gerarSenha.addEventListener('click', () => {
         }
 
         mostrarSenha.textContent = senhaAtual
-        containerResultado.style.opacity = 1
-        containerResultado.style.transition = '1s';
+        containerResultado.style.display = 'flex'
         tamanhoSenha.value = ''
         copiarSenha.addEventListener('click', () => {
             mensagem.style.display = 'flex'
@@ -36,6 +39,10 @@ gerarSenha.addEventListener('click', () => {
             mensagem.textContent = 'Senha copiada com sucesso!!'
             mensagem.style.animation = 'mensagem .5s ease-in-out  2 '
             navigator.clipboard.writeText(senhaAtual)
+
+            setTimeout(() =>{
+                mensagem.style.display = 'none'
+            }, 3000)
 
         })
 
